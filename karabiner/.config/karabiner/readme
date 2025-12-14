@@ -5,9 +5,7 @@ The "generators" directory contains the jsonnet templates used for generating th
 
 The makefile can be used to simplify the generation process.
 
-# Install dependencies, generate the targets(if modified)
-# and symlink the karabiner directory to ~/.config/karabiner
-# NOTE: should only be used the first time
+# Install dependencies(with homebrew) and symlink the karabiner directory to ~/.config/karabiner
 make init
 
 # simply run make to generate the new/outdated targets
