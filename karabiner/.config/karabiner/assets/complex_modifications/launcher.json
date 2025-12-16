@@ -29,7 +29,7 @@
                   "basic.simultaneous_threshold_milliseconds": 500
                },
                "to": {
-                  "shell_command": "export MOZ_DISABLE_SAFE_MODE_KEY=1; open /Applications/Firefox.app"
+                  "shell_command": "export MOZ_DISABLE_SAFE_MODE_KEY=1; open ~/Applications/Home\\ Manager\\ Apps/Firefox.app"
                },
                "type": "basic"
             }
@@ -64,7 +64,7 @@
                   "basic.simultaneous_threshold_milliseconds": 500
                },
                "to": {
-                  "shell_command": "open /Applications/Alacritty.app"
+                  "shell_command": "open ~/Applications/Home\\ Manager\\ Apps/kitty.app"
                },
                "type": "basic"
             }
@@ -100,41 +100,6 @@
                },
                "to": {
                   "shell_command": "open /System/Applications/Music.app"
-               },
-               "type": "basic"
-            }
-         ]
-      },
-      {
-         "description": "Launch: Project Progress",
-         "manipulators": [
-            {
-               "from": {
-                  "modifiers": {
-                     "mandatory": [
-                        "left_shift",
-                        "left_control",
-                        "left_option",
-                        "left_command"
-                     ]
-                  },
-                  "simultaneous": [
-                     {
-                        "key_code": "s"
-                     },
-                     {
-                        "key_code": "p"
-                     }
-                  ],
-                  "simultaneous_options": {
-                     "key_down_order": "strict"
-                  }
-               },
-               "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 500
-               },
-               "to": {
-                  "shell_command": "/opt/homebrew/bin/wezterm start --class scratch.project-progress --cwd ~/Projects/minor_project_mca /Users/amlan/.local/share/bob/nvim-bin/nvim daily_progress.md"
                },
                "type": "basic"
             }

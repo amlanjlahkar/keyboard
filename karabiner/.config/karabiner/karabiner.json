@@ -20,7 +20,9 @@
                                             "^org\\.alacritty$",
                                             "^info\\.sioyek\\.sioyek$",
                                             "^md\\.obsidian$",
-                                            "^org\\.mozilla\\.firefox"
+                                            "^org\\.mozilla\\.firefox$",
+                                            "^org\\.nixos\\.firefox$",
+                                            "^net\\.kovidgoyal\\.kitty$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -47,7 +49,9 @@
                                             "^org\\.alacritty$",
                                             "^info\\.sioyek\\.sioyek$",
                                             "^md\\.obsidian$",
-                                            "^org\\.mozilla\\.firefox"
+                                            "^org\\.mozilla\\.firefox$",
+                                            "^org\\.nixos\\.firefox$",
+                                            "^net\\.kovidgoyal\\.kitty$"
                                         ],
                                         "type": "frontmost_application_if"
                                     },
@@ -71,7 +75,9 @@
                                             "^org\\.alacritty$",
                                             "^info\\.sioyek\\.sioyek$",
                                             "^md\\.obsidian$",
-                                            "^org\\.mozilla\\.firefox"
+                                            "^org\\.mozilla\\.firefox$",
+                                            "^org\\.nixos\\.firefox$",
+                                            "^net\\.kovidgoyal\\.kitty$"
                                         ],
                                         "type": "frontmost_application_if"
                                     },
@@ -98,7 +104,9 @@
                                             "^org\\.alacritty$",
                                             "^info\\.sioyek\\.sioyek$",
                                             "^md\\.obsidian$",
-                                            "^org\\.mozilla\\.firefox"
+                                            "^org\\.mozilla\\.firefox$",
+                                            "^org\\.nixos\\.firefox$",
+                                            "^net\\.kovidgoyal\\.kitty$"
                                         ],
                                         "type": "frontmost_application_if"
                                     },
@@ -147,7 +155,9 @@
                                             "^org\\.alacritty$",
                                             "^info\\.sioyek\\.sioyek$",
                                             "^md\\.obsidian$",
-                                            "^org\\.mozilla\\.firefox"
+                                            "^org\\.mozilla\\.firefox$",
+                                            "^org\\.nixos\\.firefox$",
+                                            "^net\\.kovidgoyal\\.kitty$"
                                         ],
                                         "type": "frontmost_application_if"
                                     },
@@ -246,19 +256,19 @@
                         ]
                     },
                     {
-                        "description": "Launch: Terminal",
+                        "description": "Launch: Browser",
                         "manipulators": [
                             {
                                 "from": {
                                     "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] },
                                     "simultaneous": [
                                         { "key_code": "p" },
-                                        { "key_code": "x" }
+                                        { "key_code": "w" }
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
                                 "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
-                                "to": { "shell_command": "open /Applications/Alacritty.app" },
+                                "to": { "shell_command": "export MOZ_DISABLE_SAFE_MODE_KEY=1; open ~/Applications/Home\\ Manager\\ Apps/Firefox.app" },
                                 "type": "basic"
                             }
                         ]
@@ -282,19 +292,19 @@
                         ]
                     },
                     {
-                        "description": "Launch: Browser",
+                        "description": "Launch: Terminal",
                         "manipulators": [
                             {
                                 "from": {
                                     "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] },
                                     "simultaneous": [
                                         { "key_code": "p" },
-                                        { "key_code": "w" }
+                                        { "key_code": "x" }
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
                                 "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
-                                "to": { "shell_command": "export MOZ_DISABLE_SAFE_MODE_KEY=1; open /Applications/Firefox.app" },
+                                "to": { "shell_command": "open ~/Applications/Home\\ Manager\\ Apps/kitty.app" },
                                 "type": "basic"
                             }
                         ]
