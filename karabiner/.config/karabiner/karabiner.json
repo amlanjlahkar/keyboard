@@ -22,6 +22,7 @@
                                             "^md\\.obsidian$",
                                             "^org\\.mozilla\\.firefox$",
                                             "^org\\.nixos\\.firefox$",
+                                            "^net\\.imput\\.helium$",
                                             "^net\\.kovidgoyal\\.kitty$"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -51,6 +52,7 @@
                                             "^md\\.obsidian$",
                                             "^org\\.mozilla\\.firefox$",
                                             "^org\\.nixos\\.firefox$",
+                                            "^net\\.imput\\.helium$",
                                             "^net\\.kovidgoyal\\.kitty$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -77,6 +79,7 @@
                                             "^md\\.obsidian$",
                                             "^org\\.mozilla\\.firefox$",
                                             "^org\\.nixos\\.firefox$",
+                                            "^net\\.imput\\.helium$",
                                             "^net\\.kovidgoyal\\.kitty$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -106,6 +109,7 @@
                                             "^md\\.obsidian$",
                                             "^org\\.mozilla\\.firefox$",
                                             "^org\\.nixos\\.firefox$",
+                                            "^net\\.imput\\.helium$",
                                             "^net\\.kovidgoyal\\.kitty$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -157,6 +161,7 @@
                                             "^md\\.obsidian$",
                                             "^org\\.mozilla\\.firefox$",
                                             "^org\\.nixos\\.firefox$",
+                                            "^net\\.imput\\.helium$",
                                             "^net\\.kovidgoyal\\.kitty$"
                                         ],
                                         "type": "frontmost_application_if"
@@ -256,24 +261,6 @@
                         ]
                     },
                     {
-                        "description": "Launch: Browser",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] },
-                                    "simultaneous": [
-                                        { "key_code": "p" },
-                                        { "key_code": "w" }
-                                    ],
-                                    "simultaneous_options": { "key_down_order": "strict" }
-                                },
-                                "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
-                                "to": { "shell_command": "export MOZ_DISABLE_SAFE_MODE_KEY=1; open ~/Applications/Home\\ Manager\\ Apps/Firefox.app" },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Launch: Music",
                         "manipulators": [
                             {
@@ -305,6 +292,48 @@
                                 },
                                 "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
                                 "to": { "shell_command": "open ~/Applications/Home\\ Manager\\ Apps/kitty.app" },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Launch: Browser",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] },
+                                    "simultaneous": [
+                                        { "key_code": "p" },
+                                        { "key_code": "w" }
+                                    ],
+                                    "simultaneous_options": { "key_down_order": "strict" }
+                                },
+                                "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
+                                "to": { "shell_command": "export MOZ_DISABLE_SAFE_MODE_KEY=1; open ~/Applications/Home\\ Manager\\ Apps/Firefox.app" },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Progrule: Helium",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^net\\.imput\\.helium$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": { "mandatory": ["left_control"] }
+                                },
+                                "to": {
+                                    "key_code": "a",
+                                    "modifiers": ["left_command", "left_shift"]
+                                },
                                 "type": "basic"
                             }
                         ]

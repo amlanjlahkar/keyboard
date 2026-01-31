@@ -17,6 +17,7 @@ local param_simthreshold = { 'basic.simultaneous_threshold_milliseconds': 500 };
           p: param_simthreshold,
           f: { s: [launch_prefix, 'w'], so: { key_down_order: 'strict' }, m: hyper(true).m },
           t: { sc: 'export MOZ_DISABLE_SAFE_MODE_KEY=1; open ~/Applications/Home\\ Manager\\ Apps/Firefox.app' },
+          // t: { sc: 'open /Applications/Helium.app' },
         }),
       ],
     },

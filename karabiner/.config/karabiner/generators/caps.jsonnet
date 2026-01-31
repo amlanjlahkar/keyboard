@@ -18,6 +18,7 @@ local bid = [
   '^md\\.obsidian$',
   '^org\\.mozilla\\.firefox$',
   '^org\\.nixos\\.firefox$',
+  '^net\\.imput\\.helium$',
   '^net\\.kovidgoyal\\.kitty$',
 ];
 
