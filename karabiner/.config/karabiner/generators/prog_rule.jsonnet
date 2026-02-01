@@ -37,7 +37,9 @@ local if_app = util.if_app;
       local bid = ['^net\\.imput\\.helium$'],
       local manipulators = [
         // Search tabs
-        mp({ f: { k: 'a', m: ['left_control'] }, t: { k: 'a', m: ['left_command', 'left_shift'] } }),
+        mp({ f: { k: 'a', m: ['left_control'] }, t: { k: 'a', m: ['left_shift', 'left_command'] } }),
+        mp({ f: { k: 'j', m: ['left_control'] }, t: { k: 'tab', m: ['left_control'] } }),
+        mp({ f: { k: 'k', m: ['left_control'] }, t: { k: 'tab', m: ['left_shift', 'left_control'] } }),
       ],
 
       manipulators: [m + { conditions: [if_app(bid)] } for m in manipulators],
