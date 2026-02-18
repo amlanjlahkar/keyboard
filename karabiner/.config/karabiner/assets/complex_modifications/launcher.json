@@ -29,7 +29,7 @@
                   "basic.simultaneous_threshold_milliseconds": 500
                },
                "to": {
-                  "shell_command": "export MOZ_DISABLE_SAFE_MODE_KEY=1; open ~/Applications/Home\\ Manager\\ Apps/Firefox.app"
+                  "shell_command": "open /Applications/Helium.app"
                },
                "type": "basic"
             }
