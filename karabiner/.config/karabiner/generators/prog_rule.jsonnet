@@ -28,7 +28,7 @@ local if_app = util.if_app;
         mp({ f: { k: 'z', m: hyper(true).m }, t: { k: 'z', m: ['left_control'] } }),
       ],
 
-      manipulators: [m + { conditions: [if_app(bid)] } for m in manipulators],
+      manipulators: [m { conditions: [if_app(bid)] } for m in manipulators],
     },
 
     {
@@ -36,13 +36,15 @@ local if_app = util.if_app;
 
       local bid = ['^net\\.imput\\.helium$'],
       local manipulators = [
-        // Search tabs
+        // tabs
         mp({ f: { k: 'a', m: ['left_control'] }, t: { k: 'a', m: ['left_shift', 'left_command'] } }),
         mp({ f: { k: 'j', m: ['left_control'] }, t: { k: 'tab', m: ['left_control'] } }),
         mp({ f: { k: 'k', m: ['left_control'] }, t: { k: 'tab', m: ['left_shift', 'left_control'] } }),
+        mp({ f: { k: 'n', m: ['left_control'] }, t: { k: 't', m: ['left_command'] } }),
+        mp({ f: { k: 'w', m: ['left_control'] }, t: { k: 'w', m: ['left_command'] } }),
       ],
 
-      manipulators: [m + { conditions: [if_app(bid)] } for m in manipulators],
+      manipulators: [m { conditions: [if_app(bid)] } for m in manipulators],
     },
   ],
 }
