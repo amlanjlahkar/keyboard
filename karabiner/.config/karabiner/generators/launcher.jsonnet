@@ -28,6 +28,7 @@ local param_simthreshold = { 'basic.simultaneous_threshold_milliseconds': 500 };
           p: param_simthreshold,
           f: { s: [launch_prefix, 'x'], so: { key_down_order: 'strict' }, m: hyper(true).m },
           t: { sc: 'open ~/Applications/Home\\ Manager\\ Apps/kitty.app' },
+          // t: { sc: 'open /Applications/Ghostty.app' },
         }),
       ],
     },

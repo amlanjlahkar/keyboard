@@ -279,24 +279,6 @@
                         ]
                     },
                     {
-                        "description": "Launch: Terminal",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] },
-                                    "simultaneous": [
-                                        { "key_code": "p" },
-                                        { "key_code": "x" }
-                                    ],
-                                    "simultaneous_options": { "key_down_order": "strict" }
-                                },
-                                "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
-                                "to": { "shell_command": "open ~/Applications/Home\\ Manager\\ Apps/kitty.app" },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Launch: Browser",
                         "manipulators": [
                             {
@@ -310,6 +292,24 @@
                                 },
                                 "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
                                 "to": { "shell_command": "open /Applications/Helium.app" },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Launch: Terminal",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] },
+                                    "simultaneous": [
+                                        { "key_code": "p" },
+                                        { "key_code": "x" }
+                                    ],
+                                    "simultaneous_options": { "key_down_order": "strict" }
+                                },
+                                "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
+                                "to": { "shell_command": "open ~/Applications/Home\\ Manager\\ Apps/kitty.app" },
                                 "type": "basic"
                             }
                         ]
